@@ -21,7 +21,13 @@ namespace WF_RabotaXML
         //Кнопка пуск
         private void Button1_Click(object sender, EventArgs e)
         {
+            Zapuskator();
+        }
 
+        void Zapuskator()
+        {
+            Bl bl = new Bl();
+           label1.Text = bl.GetDataFailXml(@"lastRestsWarehouse.xml");
         }
     }
 }
