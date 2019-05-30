@@ -23,8 +23,16 @@ namespace WF_RabotaXML
 
             XmlNode root = documen.DocumentElement;  //в обьект запысаваем корневой главный рут документа 
 
-            temXmlFail = $"Имя documen.DocumentElement: '{root.LocalName}'";
+            temXmlFail = $"Имя documen.DocumentElement: '{root.LocalName}'" ; // получение имя корневого элемента
+            temXmlFail += Environment.NewLine;
 
+            foreach (XmlNode node in root.ChildNodes) // получение дочерных узлов
+            {
+                temXmlFail += node.Name + ": " + node.InnerText;
+                temXmlFail += Environment.NewLine;
+                temXmlFail += "-----------------------------------";
+                temXmlFail += Environment.NewLine;
+            }
 
 
             //*********************************
@@ -56,6 +64,22 @@ namespace WF_RabotaXML
 
         }
 
+        public string GetDataFailXml2(string path)
+        {
+            string tempLog = "";
+            var reader = new XmlTextReader(path); // работаем  с xml
+
+
+            while (reader.Read()) // считываем весь файл
+            {
+
+
+            }
+
+
+
+            return tempLog;
+        }
 
     }
 }
