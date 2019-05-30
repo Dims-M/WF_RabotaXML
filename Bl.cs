@@ -67,17 +67,29 @@ namespace WF_RabotaXML
         public string GetDataFailXml2(string path)
         {
             string tempLog = "";
-            var reader = new XmlTextReader(path); // работаем  с xml
+            // var reader = new XmlTextReader(path); // работаем  с xml
+            var reader = new XmlDocument( );
+            reader.Load(path); // получаем файл
 
-
-            while (reader.Read()) // считываем весь файл
+            XmlElement xRoot = reader.DocumentElement; // получаем все элементы документа
+            foreach (XmlNode xnode in xRoot) // считываем весь файл
             {
+                
 
+                if (xnode.Attributes.Count > 0)
+                {
+                    var attr = xnode.Attributes.GetNamedItem("ns:Documents");
+                    
+                    if (attr!= null) // ищем совпадения по нужному параметру
+                    {
+                        //tempLog +=$"= {reader.GetAttribute("wa:Note")}";
+                        tempLog += $"123654{attr.Value}" ;
+                    }
 
+                 }
+                
             }
-
-
-
+            tempLog += $"Значение не установленно.";
             return tempLog;
         }
 

@@ -28,12 +28,14 @@ namespace WF_RabotaXML
         {
             Bl bl = new Bl();
             // label1.Text = bl.GetDataFailXml(@"lastRestsShop.xml");
-            textBox1.Text = bl.GetDataFailXml(@"lastRestsShop.xml");
+            // textBox1.Text = bl.GetDataFailXml(@"lastRestsShop.xml");
             // label1.Text = bl.GetDataFailXml(@"ne_prinatieTTN.xml"); 
 
-             //textBox1.Text = bl.GetDataFailXml(@"ne_prinatieTTN.xml");
+            //textBox1.Text = bl.GetDataFailXml(@"ne_prinatieTTN.xml");
             // textBox1.Text = bl.GetDataFailXml(@"WayBillAct_v3.xml");
-
+            textBox1.Text += bl.GetDataFailXml2("WayBillAct_v3-41.xml");
+           // textBox1.Text += bl.GetDataFailXml2("books.xml");
+            // bl.GetDataFailXml2("users.xml");
         }
 
         //очистиить
