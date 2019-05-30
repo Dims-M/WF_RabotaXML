@@ -27,7 +27,12 @@ namespace WF_RabotaXML
         void Zapuskator()
         {
             Bl bl = new Bl();
-           label1.Text = bl.GetDataFailXml(@"lastRestsWarehouse.xml");
+            // label1.Text = bl.GetDataFailXml(@"lastRestsShop.xml");
+            // textBox1.Text = bl.GetDataFailXml(@"lastRestsShop.xml");
+            //label1.Text = bl.GetDataFailXml(@"ne_prinatieTTN.xml"); 
+
+            textBox1.Text = bl.GetDataFailXml(@"WayBillAct_v3.xml");
+             
         }
     }
 }
