@@ -22,6 +22,7 @@ namespace WF_RabotaXML
         private void Button1_Click(object sender, EventArgs e)
         {
             Zapuskator();
+            ZapuskatorSer();
         }
 
         void Zapuskator()
@@ -36,6 +37,14 @@ namespace WF_RabotaXML
             textBox1.Text += bl.GetDataFailXml2("WayBillAct_v3-41.xml");
            // textBox1.Text += bl.GetDataFailXml2("books.xml");
             // bl.GetDataFailXml2("users.xml");
+        }
+
+        /// <summary>
+        /// Запуск методов для работы с сериализацией.
+        /// </summary>
+        void ZapuskatorSer()
+        {
+
         }
 
         //очистиить

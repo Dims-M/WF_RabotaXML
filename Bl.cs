@@ -93,5 +93,13 @@ namespace WF_RabotaXML
             return tempLog;
         }
 
+       //Работаем с сериализацией
+
+        public void RabSearilizachia()
+        {
+
+
+
+        }
     }
 }
