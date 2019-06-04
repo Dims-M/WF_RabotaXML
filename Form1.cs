@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace WF_RabotaXML
 {
@@ -21,7 +23,7 @@ namespace WF_RabotaXML
         //Кнопка пуск
         private void Button1_Click(object sender, EventArgs e)
         {
-            Zapuskator();
+          //  Zapuskator();
             ZapuskatorSer();
         }
 
@@ -44,6 +46,12 @@ namespace WF_RabotaXML
         /// </summary>
         void ZapuskatorSer()
         {
+            //Сейрилизуем в формате xml
+            // XmlSerializer serializer = new XmlSerializer(typeof(Bl));
+
+            Bl primerSeri = new Bl();
+
+            Job_XmlSerializer(primerSeri);
 
         }
 
@@ -58,5 +66,19 @@ namespace WF_RabotaXML
         {
             Close();
         }
+
+        void Job_XmlSerializer(object obj)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Object));
+
+
+            using (FileStream stream = new FileStream("Serializer.xml",FileMode.Create,FileAccess.Write))
+            {
+                serializer.Serialize(stream, obj);
+
+            };
+            label1.Text = "Обьект серилизован";
+        }
     }
 }
+ 

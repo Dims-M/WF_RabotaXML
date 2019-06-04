@@ -11,6 +11,7 @@ namespace WF_RabotaXML
     /// <summary>
     /// Логика работы
     /// </summary>
+    [Serializable]
   public  class Bl
     {
 
