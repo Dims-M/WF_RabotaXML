@@ -67,9 +67,9 @@ namespace WF_RabotaXML
             Close();
         }
 
-        void Job_XmlSerializer(object obj)
+        void Job_XmlSerializer(Bl obj)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Object));
+            XmlSerializer serializer = new XmlSerializer(typeof(Bl));
 
 
             using (FileStream stream = new FileStream("Serializer.xml",FileMode.Create,FileAccess.Write))
