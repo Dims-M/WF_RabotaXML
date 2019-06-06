@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace WF_RabotaXML
 {
@@ -21,8 +23,7 @@ namespace WF_RabotaXML
         //Кнопка пуск
         private void Button1_Click(object sender, EventArgs e)
         {
-            // Zapuskator();
-            RabotaSQLite();
+            Zapuskator();
         }
 
         void Zapuskator()
@@ -39,13 +40,6 @@ namespace WF_RabotaXML
             // bl.GetDataFailXml2("users.xml");
         }
 
-        void RabotaSQLite()
-        {
-            RabSql rabSql = new RabSql();
-           label1.Text =  rabSql.CraeteBDSQLite();
-
-        }
-
         //очистиить
         private void Button3_Click(object sender, EventArgs e)
         {
@@ -57,8 +51,6 @@ namespace WF_RabotaXML
         {
             Close();
         }
-
-
-
     }
 }
+ 

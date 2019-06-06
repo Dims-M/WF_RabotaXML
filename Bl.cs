@@ -11,6 +11,7 @@ namespace WF_RabotaXML
     /// <summary>
     /// Логика работы
     /// </summary>
+    [Serializable]
   public  class Bl
     {
         
@@ -93,5 +94,13 @@ namespace WF_RabotaXML
             return tempLog;
         }
 
+       //Работаем с сериализацией
+
+        public void RabSearilizachia()
+        {
+
+
+
+        }
     }
 }
