@@ -21,7 +21,8 @@ namespace WF_RabotaXML
         //Кнопка пуск
         private void Button1_Click(object sender, EventArgs e)
         {
-            Zapuskator();
+            // Zapuskator();
+            RabotaSQLite();
         }
 
         void Zapuskator()
@@ -38,6 +39,13 @@ namespace WF_RabotaXML
             // bl.GetDataFailXml2("users.xml");
         }
 
+        void RabotaSQLite()
+        {
+            RabSql rabSql = new RabSql();
+           label1.Text =  rabSql.CraeteBDSQLite();
+
+        }
+
         //очистиить
         private void Button3_Click(object sender, EventArgs e)
         {
@@ -49,5 +57,8 @@ namespace WF_RabotaXML
         {
             Close();
         }
+
+
+
     }
 }

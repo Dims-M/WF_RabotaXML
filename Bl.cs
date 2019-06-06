@@ -13,7 +13,7 @@ namespace WF_RabotaXML
     /// </summary>
   public  class Bl
     {
-
+        
         public string GetDataFailXml(string path)
         {
             XmlDocument documen = new XmlDocument(); // обьект для работы с файлом
