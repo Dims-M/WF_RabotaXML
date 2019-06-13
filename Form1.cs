@@ -14,9 +14,13 @@ namespace WF_RabotaXML
 {
     public partial class Form1 : Form
     {
+        ApplicationContext db;
+
         public Form1()
         {
             InitializeComponent();
+
+
         }
 
 
@@ -38,6 +42,16 @@ namespace WF_RabotaXML
             textBox1.Text += bl.GetDataFailXml2("WayBillAct_v3-41.xml");
            // textBox1.Text += bl.GetDataFailXml2("books.xml");
             // bl.GetDataFailXml2("users.xml");
+        }
+
+        void JobSqlite()
+        {
+
+            //db = new ApplicationContext();
+           //db.Phones.Load();
+            //this.DataContext = db.Phones.Local.ToBindingList();
+
+
         }
 
         //очистиить
